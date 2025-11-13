@@ -142,7 +142,7 @@
       box-shadow: 0 6px 15px rgba(150, 100, 120, 0.5);
     }
 
-    /* POPULAR PRODUCT */
+    /* PRODUK POPULER */
     .popular {
       background: linear-gradient(to right, #f8d5e0, #e7d9ff, #f8e8d6);
       padding: 70px 20px;
@@ -164,10 +164,16 @@
 
     .card {
       background: white;
-      width: 280px;
+      width: 270px;
       border-radius: 18px;
       overflow: hidden;
       box-shadow: 0 5px 12px rgba(180, 120, 140, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(180, 120, 140, 0.5);
     }
 
     .card img {
@@ -185,6 +191,23 @@
       font-size: 15px;
       color: #3b2b2b;
       padding: 0 10px 20px;
+    }
+
+    .see-more {
+      margin-top: 25px;
+      background-color: #f7c7db;
+      color: #5c2a4a;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 3px 8px rgba(180, 120, 140, 0.3);
+    }
+
+    .see-more:hover {
+      background-color: #e8d6ff;
+      transform: scale(1.05);
     }
 
     footer {
@@ -224,10 +247,10 @@
       Warna-warna lembut seperti pink, ungu muda, dan cream menjadi ciri khas dari setiap karya kami.
     </p>
     <div class="gallery">
-      <img src="rajut1.jpg" alt="Rajutan 1" />
-      <img src="rajut2.jpg" alt="Rajutan 2" />
-      <img src="rajut3.jpg" alt="Rajutan 3" />
-      <img src="rajut4.jpg" alt="Rajutan 4" />
+    <img src="gantungan.jpg" alt="Keychain Rajut">
+    <img src="Bunga Rajut.jpeg" alt="Bunga Rajut">
+    <img src="Tas Rajut.jpg" alt="Tas Rajut">
+    <img src="tas kambing.jpg" alt="Tas Rajut Custom"> 
     </div>
   </section>
 
@@ -235,21 +258,31 @@
     <h2>Produk Populer</h2>
     <div class="cards">
       <div class="card">
-        <img src="tasrajut.jpg" alt="Tas Rajut" />
-        <h3>Tas Rajut Elegan</h3>
-        <p>Terbuat dari benang berkualitas tinggi, cocok untuk gaya santai maupun formal.</p>
+        <img src="gantungan.jpg" alt="Keychain Rajut" />
+        <h3>Keychain Rajut</h3>
+        <p>Gantungan kunci lucu dan unik dengan desain karakter atau bunga rajut mini.</p>
       </div>
+
       <div class="card">
-        <img src="dompetrajut.jpg" alt="Dompet Rajut" />
-        <h3>Dompet Rajut</h3>
-        <p>Desain minimalis dan manis, cocok untuk hadiah spesial.</p>
+        <img src="Bunga Rajut.jpeg" alt="Bunga Rajut" />
+        <h3>Bunga Rajut</h3>
+        <p>Bunga rajut cantik yang tidak layu, cocok sebagai dekorasi atau hadiah istimewa.</p>
       </div>
+
       <div class="card">
-        <img src="topirajut.jpg" alt="Topi Rajut" />
-        <h3>Topi Rajut</h3>
-        <p>Hangat, lembut, dan nyaman dipakai untuk segala suasana.</p>
+        <img src="Tas rajut.jpg" alt="Tas Rajut" />
+        <h3>Tas Rajut</h3>
+        <p>Tas rajut elegan yang modis dan cocok digunakan untuk acara santai maupun formal.</p>
+      </div>
+
+      <div class="card">
+        <img src="tas kambing.jpg" alt="Tas Rajut Custom" />
+        <h3>Tas Rajut Custom</h3>
+        <p>Buat tas impianmu sendiri dengan desain dan warna sesuai keinginanmu 🤍.</p>
       </div>
     </div>
+
+    <button class="see-more">Lihat Produk Lainnya ></button>
   </div>
 
   <footer>
