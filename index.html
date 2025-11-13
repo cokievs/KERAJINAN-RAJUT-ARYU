@@ -1,97 +1,132 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kerajinan Rajut ARYU: Art Rajut Yuri</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kerajinan Rajut ARYU | Art Rajut Yuri</title>
   <style>
+    * {
+      box-sizing: border-box;
+      transition: 0.3s ease;
+    }
+
     body {
-      font-family: 'Times New Roman', serif;
-      background: linear-gradient(135deg, #ffe6f0, #e8d6ff, #fff4e6);
-      color: #4a2c2a;
       margin: 0;
-      padding: 0;
-      text-align: center;
-      background-attachment: fixed;
+      font-family: 'Poppins', sans-serif;
+      background: #fff8fa;
+      color: #4a2c2a;
+    }
+
+    /* NAVBAR */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 240, 245, 0.9);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 50px;
+      box-shadow: 0 2px 10px rgba(150, 100, 120, 0.3);
+      z-index: 10;
     }
 
     .logo {
-      position: absolute;
-      top: 15px;
-      left: 20px;
-      width: 90px;
-      height: auto;
-      border-radius: 15px;
-      transition: transform 0.3s ease;
-      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    .logo:hover {
-      transform: scale(1.08);
+    .logo img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
     }
 
-    h1 {
-      background: linear-gradient(to right, #d8a7b1, #f7c7db, #e8d6ff);
-      color: white;
-      padding: 30px 15px;
-      margin: 0;
-      font-size: 34px;
-      letter-spacing: 1.5px;
-      text-shadow: 2px 2px 6px rgba(160, 80, 100, 0.4);
-      box-shadow: 0 4px 12px rgba(200, 150, 180, 0.4);
-      border-bottom: 2px solid #f6dce8;
-      animation: slideGlow 4s ease-in-out infinite alternate;
-    }
-
-    @keyframes slideGlow {
-      0% { transform: translateY(0px); text-shadow: 0 0 8px rgba(255, 230, 240, 0.5); }
-      50% { transform: translateY(-6px); text-shadow: 0 0 18px rgba(255, 200, 230, 0.9); }
-      100% { transform: translateY(0px); text-shadow: 0 0 8px rgba(255, 230, 240, 0.5); }
-    }
-
-    p {
-      font-size: 19px;
-      margin: 30px auto;
-      color: #3b2b2b;
-      max-width: 750px;
-      background-color: rgba(255, 250, 250, 0.7);
-      padding: 18px 30px;
-      border-radius: 25px;
-      box-shadow: 0 2px 8px rgba(200, 150, 180, 0.3);
-    }
-
-    nav {
-      margin-top: 20px;
-      background: linear-gradient(to right, #f8d5e0, #e7d9ff, #f8e8d6);
-      padding: 15px 30px;
-      border-radius: 35px;
-      display: inline-block;
-      box-shadow: 0 6px 12px rgba(150, 100, 120, 0.3);
+    .logo h2 {
+      font-size: 20px;
+      color: #8b4a6b;
+      font-weight: 700;
     }
 
     nav a {
       text-decoration: none;
       color: #8b4a6b;
-      font-weight: bold;
-      font-size: 18px;
-      margin: 0 18px;
-      transition: all 0.3s ease;
+      font-weight: 600;
+      margin: 0 15px;
+      font-size: 17px;
     }
 
     nav a:hover {
       color: #5c2a4a;
-      text-shadow: 1px 1px 10px rgba(255, 200, 230, 0.9);
-      transform: scale(1.1);
+      text-shadow: 0 0 8px rgba(255, 200, 230, 0.9);
     }
 
-    /* GALERI TAMBAHAN */
-    .gallery {
-      margin: 50px auto;
+    /* HERO SECTION */
+    .hero {
+      height: 100vh;
+      background: url('banner.jpg') center/cover no-repeat;
       display: flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    .hero h1 {
+      position: relative;
+      font-size: 50px;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 10px rgba(255, 180, 200, 0.9);
+    }
+
+    .hero p {
+      position: relative;
+      font-size: 20px;
+      margin-top: 15px;
+      color: #ffeef5;
+    }
+
+    /* SECTION TENTANG */
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 30px;
+      color: #8b4a6b;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      color: #3b2b2b;
+      line-height: 1.7;
+      background-color: rgba(255, 250, 250, 0.8);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 3px 8px rgba(200, 150, 180, 0.3);
+    }
+
+    /* GALERI PRODUK */
+    .gallery {
+      display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 25px;
-      max-width: 1000px;
     }
 
     .gallery img {
@@ -99,61 +134,126 @@
       height: 280px;
       object-fit: cover;
       border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(150, 100, 120, 0.3);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 4px 10px rgba(150, 100, 120, 0.3);
     }
 
     .gallery img:hover {
       transform: scale(1.07);
-      box-shadow: 0 6px 18px rgba(150, 100, 120, 0.5);
+      box-shadow: 0 6px 15px rgba(150, 100, 120, 0.5);
+    }
+
+    /* POPULAR PRODUCT */
+    .popular {
+      background: linear-gradient(to right, #f8d5e0, #e7d9ff, #f8e8d6);
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .popular h2 {
+      font-size: 28px;
+      color: #5c2a4a;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      width: 280px;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 5px 12px rgba(180, 120, 140, 0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      color: #8b4a6b;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #3b2b2b;
+      padding: 0 10px 20px;
     }
 
     footer {
-      margin-top: 60px;
-      padding: 18px;
       background: linear-gradient(to right, #e8d6ff, #f7c7db, #fff4e6);
+      text-align: center;
+      padding: 20px;
       color: #4a2c2a;
       font-size: 15px;
-      letter-spacing: 0.6px;
-      text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.6);
-      box-shadow: 0 -3px 10px rgba(200, 150, 180, 0.4);
-    }
-
-    * {
-      transition: all 0.3s ease;
+      box-shadow: 0 -2px 8px rgba(150, 100, 120, 0.4);
     }
   </style>
 </head>
 <body>
-  <!-- LOGO DI KIRI ATAS -->
-  <a href="index.html">
-    <img src="logo.png" alt="Logo ARYU" class="logo">
-  </a>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo ARYU" />
+      <h2>Kerajinan Rajut ARYU</h2>
+    </div>
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#">Tentang</a>
+      <a href="#">Produk</a>
+      <a href="#">Kontak</a>
+    </nav>
+  </header>
 
-  <h1>Selamat Datang di Toko Online<br>"Kerajinan Rajut ARYU: Art Rajut Yuri"</h1>
+  <div class="hero">
+    <h1>Kerajinan Rajut ARYU</h1>
+    <p>Art Rajut Yuri — Handmade Elegan & Penuh Cinta 🤍</p>
+  </div>
 
-  <p>
-    Kami menjual berbagai produk rajutan handmade berkualitas dengan desain yang elegan, lembut, dan penuh cinta.  
-    Setiap karya dibuat dengan teliti oleh tangan kreatif untuk menghadirkan kehangatan dalam setiap rajutan.
-  </p>
-
-  <nav>
-    <a href="index.html">Beranda</a> |
-    <a href="tentang.html">Tentang Kami</a> |
-    <a href="produk.html">Produk</a> |
-    <a href="kontak.html">Kontak</a>
-  </nav>
-
-  <!-- TAMBAHAN GAMBAR RAJUT -->
-  <section class="gallery">
-    <img src="gantungan.jpg" alt="Keychain Rajut">
-    <img src="Bunga Rajut.jpeg" alt="Bunga Rajut">
-    <img src="Tas Rajut.jpg" alt="Tas Rajut">
-    <img src="tas kambing.jpg" alt="Tas Rajut Custom">
+  <section>
+    <h2>Tentang Kami</h2>
+    <p>
+      ARYU menghadirkan berbagai produk rajutan handmade yang dibuat dengan penuh ketelitian dan kasih sayang.  
+      Setiap hasil rajutan mencerminkan kehangatan, kelembutan, dan keanggunan.  
+      Warna-warna lembut seperti pink, ungu muda, dan cream menjadi ciri khas dari setiap karya kami.
+    </p>
+    <div class="gallery">
+      <img src="rajut1.jpg" alt="Rajutan 1" />
+      <img src="rajut2.jpg" alt="Rajutan 2" />
+      <img src="rajut3.jpg" alt="Rajutan 3" />
+      <img src="rajut4.jpg" alt="Rajutan 4" />
+    </div>
   </section>
 
+  <div class="popular">
+    <h2>Produk Populer</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="tasrajut.jpg" alt="Tas Rajut" />
+        <h3>Tas Rajut Elegan</h3>
+        <p>Terbuat dari benang berkualitas tinggi, cocok untuk gaya santai maupun formal.</p>
+      </div>
+      <div class="card">
+        <img src="dompetrajut.jpg" alt="Dompet Rajut" />
+        <h3>Dompet Rajut</h3>
+        <p>Desain minimalis dan manis, cocok untuk hadiah spesial.</p>
+      </div>
+      <div class="card">
+        <img src="topirajut.jpg" alt="Topi Rajut" />
+        <h3>Topi Rajut</h3>
+        <p>Hangat, lembut, dan nyaman dipakai untuk segala suasana.</p>
+      </div>
+    </div>
+  </div>
+
   <footer>
-    &copy; 2025 Kerajinan Rajut ARYU | Art Rajut Yuri — Keindahan & Keanggunan dalam Setiap Jahitan 🧶
+    &copy; 2025 Kerajinan Rajut ARYU | Art Rajut Yuri — Handmade with Love 🧶  
   </footer>
 </body>
 </html>
