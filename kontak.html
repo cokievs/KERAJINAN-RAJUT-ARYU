@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak - Kerajinan Rajut ARYU</title>
+  <style>
+    body {
+      font-family: "Times New Roman", serif;
+      background: linear-gradient(to bottom right, #ffeaf2, #e6d6f5, #fff7e6);
+      color: #4a4a4a;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      background: linear-gradient(to right, #ffd6e8, #e5b8f4, #fff0d9);
+      color: #5a2d5e;
+      padding: 30px 10px;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      box-shadow: 0 4px 15px rgba(200, 150, 200, 0.4);
+    }
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: 1px;
+      color: #7a3b7a;
+    }
+    h3 {
+      margin-top: 5px;
+      font-style: italic;
+      font-weight: normal;
+      color: #8a588a;
+    }
+
+    /* 🌸 Bagian Utama */
+    main {
+      text-align: center;
+      margin: 40px auto;
+      max-width: 750px;
+      background-color: rgba(255, 250, 252, 0.9);
+      padding: 35px;
+      border-radius: 25px;
+      box-shadow: 0 0 20px rgba(230, 180, 220, 0.4);
+      animation: fadeIn 1s ease;
+    }
+
+    /* 🌼 Tabel Informasi Kontak */
+    table {
+      width: 90%;
+      margin: 25px auto;
+      border-collapse: collapse;
+      background-color: #fff6fa;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      overflow: hidden;
+      animation: fadeIn 1s ease;
+    }
+    th, td {
+      padding: 14px;
+      border-bottom: 1px solid #f3c5d3;
+      text-align: left;
+      color: #4a3c4c;
+    }
+    th {
+      background-color: #f3d1e2;
+      color: #4a3c4c;
+      text-align: center;
+      font-size: 18px;
+    }
+    tr:hover td {
+      background-color: #fce4ec;
+      transition: 0.3s;
+    }
+
+    /* 🌸 Form Pemesanan */
+    h2 {
+      color: #a64ca6;
+      margin-bottom: 15px;
+    }
+    form {
+      background-color: #fff6fa;
+      padding: 25px;
+      border-radius: 18px;
+      max-width: 420px;
+      margin: 25px auto;
+      box-shadow: 0 0 12px rgba(230, 170, 210, 0.5);
+    }
+    label {
+      font-weight: bold;
+      color: #7a3b7a;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 90%;
+      padding: 9px;
+      margin: 10px 0;
+      border: 1px solid #e6b3cc;
+      border-radius: 6px;
+      background-color: #fffdfd;
+      font-family: "Times New Roman", serif;
+    }
+    input[type="submit"] {
+      background: linear-gradient(to right, #ffb6c1, #d8a7e0, #ffe0b5);
+      color: white;
+      border: none;
+      padding: 10px 28px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+      box-shadow: 0 3px 8px rgba(200, 120, 180, 0.4);
+    }
+    input[type="submit"]:hover {
+      background: linear-gradient(to right, #ff99cc, #c89de0, #ffd8a8);
+      transform: scale(1.05);
+    }
+
+    /* 🌷 Navigasi & Footer */
+    nav {
+      background: linear-gradient(to right, #ffd9e8, #e7c6ff, #fff2cc);
+      padding: 12px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 35px auto;
+      max-width: 600px;
+      box-shadow: 0 0 10px rgba(230, 180, 220, 0.4);
+    }
+    nav a {
+      text-decoration: none;
+      color: #7a3b7a;
+      margin: 0 12px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      text-decoration: underline;
+      color: #a64ca6;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #7a3b7a;
+      font-size: 14px;
+      background: linear-gradient(to right, #ffeaf2, #f4e1ff, #fff7e6);
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      margin-top: 40px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Kerajinan Rajut ARYU</h1>
+    <h3><em>Art Rajut Yuri</em></h3>
+  </header>
+
+  <main>
+    <h2>Informasi Kontak</h2>
+    <table>
+      <tr>
+        <th>Jenis Informasi</th>
+        <th>Detail</th>
+      </tr>
+      <tr>
+        <td><strong>Alamat</strong></td>
+        <td>Kasiran RT 04 / RW 07, Wonosobo</td>
+      </tr>
+      <tr>
+        <td><strong>Telepon</strong></td>
+        <td>0895-2716-3804</td>
+      </tr>
+      <tr>
+        <td><strong>Email</strong></td>
+        <td>artrajutyuri@gmail.com</td>
+      </tr>
+    </table>
+
+    <h2>Form Pemesanan / Kritik & Saran</h2>
+    <form>
+      <label>Nama:</label><br>
+      <input type="text" name="nama" required><br>
+
+      <label>Email:</label><br>
+      <input type="email" name="email" required><br>
+
+      <label>Pesan:</label><br>
+      <textarea name="pesan" rows="5" required></textarea><br>
+
+      <input type="submit" value="Kirim">
+    </form>
+  </main>
+
+  <nav>
+    <a href="index.html">Beranda</a> |
+    <a href="tentang.html">Tentang Kami</a> |
+    <a href="produk.html">Produk</a> |
+    <a href="kontak.html">Kontak</a>
+  </nav>
+
+  <footer>
+    <p>&copy; 2025 Kerajinan Rajut ARYU - Art Rajut Yuri</p>
+  </footer>
+</body>
+</html>

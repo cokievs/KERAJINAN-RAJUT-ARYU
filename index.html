@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kerajinan Rajut ARYU: Art Rajut Yuri</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      background: linear-gradient(135deg, #ffe6f0, #e8d6ff, #fff4e6);
+      color: #4a2c2a;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-attachment: fixed;
+    }
+
+    .logo {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      width: 90px;
+      height: auto;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .logo:hover {
+      transform: scale(1.08);
+    }
+
+    h1 {
+      background: linear-gradient(to right, #d8a7b1, #f7c7db, #e8d6ff);
+      color: white;
+      padding: 30px 15px;
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: 1.5px;
+      text-shadow: 2px 2px 6px rgba(160, 80, 100, 0.4);
+      box-shadow: 0 4px 12px rgba(200, 150, 180, 0.4);
+      border-bottom: 2px solid #f6dce8;
+      animation: slideGlow 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes slideGlow {
+      0% { transform: translateY(0px); text-shadow: 0 0 8px rgba(255, 230, 240, 0.5); }
+      50% { transform: translateY(-6px); text-shadow: 0 0 18px rgba(255, 200, 230, 0.9); }
+      100% { transform: translateY(0px); text-shadow: 0 0 8px rgba(255, 230, 240, 0.5); }
+    }
+
+    p {
+      font-size: 19px;
+      margin: 30px auto;
+      color: #3b2b2b;
+      max-width: 750px;
+      background-color: rgba(255, 250, 250, 0.7);
+      padding: 18px 30px;
+      border-radius: 25px;
+      box-shadow: 0 2px 8px rgba(200, 150, 180, 0.3);
+    }
+
+    nav {
+      margin-top: 20px;
+      background: linear-gradient(to right, #f8d5e0, #e7d9ff, #f8e8d6);
+      padding: 15px 30px;
+      border-radius: 35px;
+      display: inline-block;
+      box-shadow: 0 6px 12px rgba(150, 100, 120, 0.3);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #8b4a6b;
+      font-weight: bold;
+      font-size: 18px;
+      margin: 0 18px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #5c2a4a;
+      text-shadow: 1px 1px 10px rgba(255, 200, 230, 0.9);
+      transform: scale(1.1);
+    }
+
+    /* GALERI TAMBAHAN */
+    .gallery {
+      margin: 50px auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      max-width: 1000px;
+    }
+
+    .gallery img {
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(150, 100, 120, 0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.07);
+      box-shadow: 0 6px 18px rgba(150, 100, 120, 0.5);
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 18px;
+      background: linear-gradient(to right, #e8d6ff, #f7c7db, #fff4e6);
+      color: #4a2c2a;
+      font-size: 15px;
+      letter-spacing: 0.6px;
+      text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.6);
+      box-shadow: 0 -3px 10px rgba(200, 150, 180, 0.4);
+    }
+
+    * {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <!-- LOGO DI KIRI ATAS -->
+  <a href="index.html">
+    <img src="logo.png" alt="Logo ARYU" class="logo">
+  </a>
+
+  <h1>Selamat Datang di Toko Online<br>"Kerajinan Rajut ARYU: Art Rajut Yuri"</h1>
+
+  <p>
+    Kami menjual berbagai produk rajutan handmade berkualitas dengan desain yang elegan, lembut, dan penuh cinta.  
+    Setiap karya dibuat dengan teliti oleh tangan kreatif untuk menghadirkan kehangatan dalam setiap rajutan.
+  </p>
+
+  <nav>
+    <a href="index.html">Beranda</a> |
+    <a href="tentang.html">Tentang Kami</a> |
+    <a href="produk.html">Produk</a> |
+    <a href="kontak.html">Kontak</a>
+  </nav>
+
+  <!-- TAMBAHAN GAMBAR RAJUT -->
+  <section class="gallery">
+    <img src="gantungan.jpg" alt="Keychain Rajut">
+    <img src="Bunga Rajut.jpeg" alt="Bunga Rajut">
+    <img src="Tas Rajut.jpg" alt="Tas Rajut">
+    <img src="tas kambing.jpg" alt="Tas Rajut Custom">
+  </section>
+
+  <footer>
+    &copy; 2025 Kerajinan Rajut ARYU | Art Rajut Yuri — Keindahan & Keanggunan dalam Setiap Jahitan 🧶
+  </footer>
+</body>
+</html>
