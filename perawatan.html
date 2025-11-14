@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cara Merawat Rajut | Kerajinan Rajut ARYU</title>
+  <style>
+    :root{
+      --ungu-muda: #E9DBFF;
+      --pink-soft: #FFEAF4;
+      --ungu: #8A4DA6;
+      --text: #4a2f4a;
+      --accent: #C78BD9;
+      --max-width: 1000px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Times New Roman", serif;
+      background: linear-gradient(135deg, var(--pink-soft), var(--ungu-muda));
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:28px;
+      min-height:100vh;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+    }
+
+    /* NAV */
+    .site-wrap{width:100%;max-width:var(--max-width)}
+    nav{
+      background: rgba(255,255,255,0.95);
+      padding:12px 18px;
+      border-radius:14px;
+      box-shadow:0 8px 26px rgba(138,77,166,0.10);
+      margin-bottom:18px;
+      display:flex;
+      align-items:center;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    nav a{
+      color:var(--ungu);
+      text-decoration:none;
+      font-weight:700;
+      padding:6px 8px;
+      border-radius:8px;
+    }
+    nav a:hover{ background:rgba(138,77,166,0.06) }
+
+    .card{
+      width:100%;
+      background:rgba(255,255,255,0.98);
+      border-radius:18px;
+      box-shadow:0 12px 30px rgba(138,77,166,0.12);
+      padding:28px;
+      overflow:hidden;
+    }
+
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      margin-bottom:18px;
+    }
+    .logo{
+      width:72px;height:72px;border-radius:12px;
+      background:linear-gradient(135deg,var(--ungu),var(--accent));
+      display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;
+      box-shadow:0 6px 18px rgba(138,77,166,0.18);
+      transform:translateY(-2px);
+      animation:float 3s ease-in-out infinite;
+    }
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+
+    h1{font-size:24px;margin:0;color:var(--ungu);letter-spacing:0.2px}
+    p.lead{margin:6px 0 0;color:#5b3a5b}
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 360px;
+      gap:22px;
+      margin-top:18px;
+    }
+
+    /* content */
+    .content{padding-right:6px}
+    .section{margin-bottom:18px}
+    .section h2{
+      margin:0 0 10px 0;color:var(--ungu);
+      font-size:18px;display:flex;align-items:center;gap:10px
+    }
+    .section p{margin:0 0 10px 0;color:#503748;line-height:1.55}
+    .lead-block{background:linear-gradient(90deg, rgba(234,218,255,0.6), rgba(255,235,244,0.6));padding:14px;border-radius:12px;border:1px solid rgba(200,150,200,0.12);}
+
+    ul.check{list-style:none;padding:0;margin:0 0 12px 0;display:flex;flex-direction:column;gap:8px}
+    ul.check li{background:linear-gradient(90deg, rgba(234,218,255,0.6), rgba(255,235,244,0.6));padding:10px 12px;border-radius:10px;border:1px solid rgba(200,150,200,0.15)}
+
+    .step{display:flex;gap:12px;align-items:flex-start;}
+    .step .num{min-width:44px;height:44px;border-radius:10px;background:var(--ungu);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;box-shadow:0 8px 20px rgba(138,77,166,0.12);transform:rotate(-6deg);animation:wiggle 4s ease-in-out infinite;}
+    @keyframes wiggle{0%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}100%{transform:rotate(-6deg)}}
+    .step .txt{flex:1}
+    .small{font-size:13px;color:#6b4a6b}
+
+    aside{
+      background:linear-gradient(180deg,var(--pink-soft),#fff);
+      border-radius:12px;padding:16px;border:1px solid rgba(138,77,166,0.08);
+      box-shadow:0 8px 20px rgba(150,110,170,0.06);
+      height:fit-content;
+    }
+    aside h3{margin:0 0 8px 0;color:var(--ungu);font-size:16px}
+    .tip{background:linear-gradient(90deg,var(--ungu-muda),var(--pink-soft));padding:10px;border-radius:10px;margin-bottom:10px;font-size:14px}
+
+    .actions{display:flex;gap:10px;margin-top:12px}
+    button{border:none;padding:10px 12px;border-radius:8px;cursor:pointer;font-weight:600}
+    .btn-primary{background:var(--ungu);color:white;box-shadow:0 8px 20px rgba(138,77,166,0.12)}
+    .btn-muted{background:transparent;border:1px solid rgba(138,77,166,0.14);color:var(--ungu)}
+
+    .footer{margin-top:16px;font-size:13px;color:#6b4a6b}
+
+    /* responsive */
+    @media(max-width:980px){
+      .grid{grid-template-columns:1fr}
+      aside{order:2}
+      nav{justify-content:center}
+    }
+
+    /* print */
+    @media print{
+      body{background:white;color:black}
+      .card{box-shadow:none;border-radius:0;padding:8px}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="site-wrap">
+
+    <!-- NAVIGASI (HANYA 1 DI ATAS) -->
+    <nav role="navigation" aria-label="Utama">
+      <a href="index.html">Beranda</a> |
+      <a href="tentang.html">Tentang Kami</a> |
+      <a href="produk.html">Produk</a> |
+      <a href="perawatan.html">Rajut Care</a> |
+      <a href="kontak.html">Kontak</a>
+    </nav>
+
+    <div class="card" role="main" aria-labelledby="pageTitle">
+      <header>
+        <div class="logo" aria-hidden="true">ARYU</div>
+        <div>
+          <h1 id="pageTitle">Cara Merawat Rajut — Tips Praktis & Aman</h1>
+          <p class="lead">Panduan lengkap untuk menjaga keindahan dan daya tahan produk rajutmu — cocok untuk sweater, topi, syal, dan kerajinan tangan.</p>
+        </div>
+      </header>
+
+      <div class="grid">
+        <div class="content">
+
+          <!-- RINGKASAN -->
+          <section class="section">
+            <div class="lead-block">
+              <strong>Ringkasan singkat:</strong>
+              <p style="margin:8px 0 0 0">Cuci: tangan (air suam) · Kering: datar setelah peras dengan handuk · Simpan: dilipat. Hindari pemutih dan pengering mesin.</p>
+            </div>
+          </section>
+
+          <!-- 1. Mencuci -->
+          <section class="section" aria-labelledby="washing">
+            <h2 id="washing">1. Mencuci — yang terbaik: tangan</h2>
+
+            <p><strong>Kenapa tangan lebih baik?</strong> Rajut umumnya terbuat dari benang yang rentan terhadap bentuk: gerakan kasar dari mesin cuci (putaran dan gesekan) dapat membuat struktur rajut meregang, berubah bentuk, atau menyebabkan benang menipis. Oleh karena itu, mencuci dengan tangan memberi kontrol penuh pada perlakuan terhadap serat.</p>
+
+            <div class="step" style="margin-top:8px">
+              <div class="num">1</div>
+              <div class="txt">
+                <p><strong>Rendam singkat:</strong> Gunakan <em>air suam</em> (bukan panas). Rendam 5–10 menit dengan deterjen lembut atau sabun khusus wool. Waktu rendaman singkat mengurangi risiko menyusut.</p>
+                <p class="small">Jangan gunakan air panas karena dapat menyebabkan penyusutan dan merusak struktur serat.</p>
+              </div>
+            </div>
+
+            <div class="step" style="margin-top:12px">
+              <div class="num">2</div>
+              <div class="txt">
+                <p><strong>Hindari mengucek atau memelintir:</strong> Setelah direndam, jangan mengucek keras, menggosok, atau memutar. Tekan perlahan untuk mengeluarkan kotoran atau busa.</p>
+                <p class="small">Gerakan memutar bisa merusak motif rajut dan membuatnya tidak rapi lagi.</p>
+              </div>
+            </div>
+
+            <div class="step" style="margin-top:12px">
+              <div class="num">3</div>
+              <div class="txt">
+                <p><strong>Bilas lembut:</strong> Bilas sampai busa hilang. Pastikan air bilasan mengalir bersih, dan tekan perlahan untuk mengeluarkan air berlebih — jangan dipelintir.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 2. Mengeringkan -->
+          <section class="section" aria-labelledby="drying">
+            <h2 id="drying">2. Mengeringkan dengan benar</h2>
+
+            <p><strong>Pentingnya pengeringan yang tepat:</strong> Cara mengeringkan menentukan apakah rajut akan mempertahankan bentuk aslinya. Kesalahan umum—menggantung saat basah atau memasukkan ke pengering—sering menjadi penyebab utama melar, penyusutan, dan kerusakan.</p>
+
+            <div class="step" style="margin-top:8px">
+              <div class="num">4</div>
+              <div class="txt">
+                <p><strong>Peras dengan handuk:</strong> Letakkan barang rajut di atas handuk bersih. Gulung handuk bersama rajut, lalu tekan perlahan untuk menyerap air. Teknik ini lebih lembut dibanding memeras langsung.</p>
+                <p class="small">Jangan memelintir kuat karena akan merusak struktur benang.</p>
+              </div>
+            </div>
+
+            <div class="step" style="margin-top:12px">
+              <div class="num">5</div>
+              <div class="txt">
+                <p><strong>Pengeringan datar:</strong> Taruh rajut di permukaan datar (meja, rak datar, atau handuk bersih), bentuk ulang sesuai ukuran aslinya, lalu biarkan kering di tempat teduh dan berventilasi.</p>
+                <p class="small">Menggantung saat basah membuat bagian bawah melar karena berat air.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 3. Menyimpan -->
+          <section class="section" aria-labelledby="storage">
+            <h2 id="storage">3. Menyimpan & Merawat Setelah Kering</h2>
+
+            <p><strong>Prinsip penyimpanan:</strong> Simpan rajut dengan cara yang menjaga bentuk dan menghindarkan serat dari serangan hama.</p>
+
+            <div class="step" style="margin-top:8px">
+              <div class="num">6</div>
+              <div class="txt">
+                <p><strong>Lipatan, bukan gantung:</strong> Simpan rajut dilipat agar tidak melar. Gantung lama-lama akan membuat bagian pundak mengendur dan bentuk berubah.</p>
+              </div>
+            </div>
+
+            <div class="step" style="margin-top:12px">
+              <div class="num">7</div>
+              <div class="txt">
+                <p><strong>Pengusir serangga alami:</strong> Tempatkan kapur barus kecil, kantong cedar, atau sachet herbal untuk mengusir ngengat. Pilih yang tidak terlalu kuat aromanya agar tidak merusak bau bahan.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 4. Perbaikan kecil -->
+          <section class="section" aria-labelledby="repair">
+            <h2 id="repair">4. Perbaikan kecil & Mengatasi Masalah</h2>
+
+            <p>Masalah ringan bisa ditangani sendiri sebelum menjadi besar. Berikut langkah-langkah praktis:</p>
+
+            <ul class="check">
+              <li><strong>Benang putus:</strong> Jahit kembali dengan jarum rajut kecil dan benang serupa dari sisi yang tidak terlihat. Kerjakan perlahan agar simpul terlihat rapi.</li>
+              <li><strong>Pilling (bulu):</strong> Gunakan fabric shaver atau pisau cukur kain dengan tekanan ringan. Pastikan alat bersih dan gunakan gerakan lembut agar tidak mengupas lapisan bawah.</li>
+              <li><strong>Noda:</strong> Tangani spot stain segera: gunakan sabun cair lembut, tepuk-tepuk dari luar ke dalam, lalu bilas. Hindari menggosok karena dapat merusak serat.</li>
+            </ul>
+          </section>
+
+          <!-- 5. Tips Tambahan & Larangan -->
+          <section class="section" aria-labelledby="tips">
+            <h2 id="tips">5. Tips Tambahan & Larangan</h2>
+
+            <ul class="check">
+              <li>Selalu periksa <strong>label perawatan</strong> pada produk — petunjuk produsen adalah acuan utama.</li>
+              <li>Jangan gunakan pemutih keras — pemutih merusak struktur serat dan warna.</li>
+              <li>Hindari pengering mesin untuk mayoritas rajutan — panas dan putaran dapat menyebabkan penyusutan dan deformasi.</li>
+              <li>Jika ragu atau barang berharga (mis. wool murni, rajut tangan mahal), serahkan ke laundry profesional dengan layanan wool/handwash.</li>
+            </ul>
+          </section>
+
+          <!-- PENJELASAN LENGKAP (TEKS PANJANG) -->
+          <section class="section" aria-labelledby="detailed">
+            <h2 id="detailed">Penjelasan Lengkap: Mengapa dan Bagaimana — Tidak Singkat</h2>
+
+            <p>Rajutan membutuhkan pendekatan perawatan yang berbeda dibanding pakaian dari tenunan datar. Karena rajut dibentuk dari loop (lingkaran) benang, setiap tekanan, peregangan, atau gesekan berlebih dapat mengubah susunan loop tersebut. Berikut penjelasan menyeluruh agar kamu benar-benar paham:</p>
+
+            <h3 style="color:var(--ungu);margin-top:12px">Mencuci — detail teknik yang aman</h3>
+            <p>Kunci utama adalah <strong>kontrol suhu</strong> dan <strong>keterbatasan gerakan mekanis</strong>. Air suam membantu melarutkan kotoran dan deterjen bekerja efektif tanpa memicu penyusutan. Rendam singkat (5–10 menit) cukup untuk melepaskan kotoran; rendaman lebih lama tidak mempercepat proses dan malah meningkatkan risiko perubahan bentuk.</p>
+            <p>Pada saat membilas, gunakan air dengan suhu mendekati suhu rendaman agar tidak terjadi perubahan suhu drastis yang memicu stres pada serat. Tekan lembut — anggap rajut seperti spons halus: kita ingin menyerap air, bukan memerasnya sampai putus.</p>
+
+            <h3 style="color:var(--ungu);margin-top:12px">Mengeringkan — mengapa datar sangat penting</h3>
+            <p>Ketika rajut basah, beratnya meningkat cukup signifikan. Jika digantung, gaya tarik akan fokus pada bagian yang menahan beban (biasanya pundak), sehingga menyebabkan regangan permanen. Pengeringan datar menyebarkan berat secara merata dan membantu menjaga pola dan ukuran. Bentukkan ulang (reshape) ketika masih lembap agar serat 'mengunci' dalam bentuk yang diinginkan saat kering.</p>
+
+            <h3 style="color:var(--ungu);margin-top:12px">Menyimpan — menjaga bentuk & keamanan</h3>
+            <p>Lipatan yang rapi menjaga struktur pundak tetap utuh. Jika ingin menyimpan lama, letakkan tissue acid-free antar lipatan untuk mengurangi tekanan pada lipatan dan mempertahankan bentuk. Untuk perlindungan dari serangga, cedar blocks atau sachet lavender/rosemary bisa digunakan, tapi jangan ditempel langsung — sebaiknya dalam kantong kain kecil.</p>
+
+            <h3 style="color:var(--ungu);margin-top:12px">Perbaikan & perawatan estetika</h3>
+            <p>Pilling (bulu) muncul karena gesekan—ini normal pada beberapa serat. Fabric shaver aman bila dipakai perlahan; jangan menekan terlalu kuat. Untuk jahitan atau benang putus, kerja dari sisi dalam (bagian tidak terlihat) untuk hasil rapi. Simpan sisa benang dari pembuatan jika ingin memperbaiki di rumah.</p>
+
+            <h3 style="color:var(--ungu);margin-top:12px">Kesimpulan teknis</h3>
+            <p>Secara singkat: <strong>Perlakukan rajut seperti barang halus</strong>. Minimalkan gesekan, kontrol suhu, dan hindari beban berlebih saat basah. Ikuti label produsen. Dengan prinsip-prinsip itu, rajut tetap awet dan tetap terlihat baru lebih lama.</p>
+          </section>
+
+          <div class="footer">Butuh versi PDF, instruksi untuk tipe serat tertentu (wol, katun, akrilik), atau file HTML siap unduh? Klik tombol di samping atau minta saja — aku bantu buatkan.</div>
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside aria-label="Sidebar tips & actions">
+          <h3>Ringkasan Cepat</h3>
+          <div class="tip"><strong>Cuci: tangan. Kering: datar. Simpan: dilipat.</strong></div>
+
+          <h3>Periksa Berdasarkan Serat</h3>
+          <p class="small">Wol—lebih sensitif pada panas. Akrilik—lebih tahan, tapi tetap hindari panas tinggi. Katun—cenderung menyusut jika dipanaskan.</p>
+
+          <h3>Alat yang Direkomendasikan</h3>
+          <ul style="padding-left:16px;margin:8px 0 0 0;color:#5b3a5b">
+            <li>Sabun lembut / Detergen wool</li>
+            <li>Handuk bersih</li>
+            <li>Fabric shaver (penghilang bulu)</li>
+          </ul>
+
+          <div class="actions">
+            <button class="btn-primary" onclick="window.print()">Cetak / Simpan PDF</button>
+            <button class="btn-muted" onclick="copyText()">Salin Ringkasan</button>
+          </div>
+
+          <script>
+            function copyText(){
+              const teks = "Cuci: tangan (air suam), bilas lembut. Keringkan datar setelah peras dengan handuk. Simpan dilipat. Hindari pemutih dan pengering mesin.";
+              navigator.clipboard?.writeText(teks).then(()=>{alert('Ringkasan disalin ke clipboard')}).catch(()=>{alert('Gagal menyalin — silakan salin manual')});
+            }
+          </script>
+
+        </aside>
+
+      </div> <!-- .grid -->
+    </div> <!-- .card -->
+
+    <footer style="margin-top:14px;text-align:center;color:#6b4a6b;font-size:13px">
+      &copy; 2025 Kerajinan Rajut ARYU - Art Rajut Yuri
+    </footer>
+
+  </div> <!-- .site-wrap -->
+</body>
+</html>
