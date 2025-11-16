@@ -1,204 +1,235 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kerajinan Rajut ARYU</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kerajinan Rajut ARYU: Art Rajut Yuri</title>
 
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: "Times New Roman", serif;
-      background: url('bg.rajut.jpeg.jpeg');
+      background: url("bg.rajut.jpeg.jpeg");
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
-      background-repeat: no-repeat;
-      color: #5e4b56;
     }
 
     /* WRAPPER */
     .container {
       max-width: 1000px;
       margin: 40px auto;
-      background: rgba(255, 245, 249, 0.85);
+      padding: 20px 20px 60px;
+      background: rgba(255, 245, 250, 0.92);
       border-radius: 25px;
-      padding: 40px 20px;
-      box-shadow: 0 0 20px rgba(200, 150, 200, 0.3);
-      backdrop-filter: blur(3px);
+      box-shadow: 0 0 25px rgba(200, 150, 200, 0.3);
+      backdrop-filter: blur(4px);
     }
 
-    /* NAVBAR SCROLL */
-    nav {
-      display: flex;
-      overflow-x: auto;
-      gap: 12px;
-      padding: 10px 15px;
-      white-space: nowrap;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-      justify-content: center;
+    /* MENU DROPDOWN */
+    .menu-wrapper {
+      text-align: center;
+      margin-bottom: 20px;
     }
 
-    nav::-webkit-scrollbar {
-      display: none;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #8b5ca2;
-      padding: 10px 18px;
-      background: #f8e7ff;
-      border-radius: 20px;
-      font-weight: bold;
-      font-size: 15px;
-      border: 1px solid #e3c8ff;
+    .menu-btn {
+      background: #cfa6e7;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 30px;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
       transition: 0.3s;
     }
 
-    nav a:hover {
-      background: #d9b7ff;
-      color: white;
+    .menu-btn:hover {
+      background: #b47dd4;
     }
 
-    /* WELCOME TEXT */
+    /* HIDDEN MENU */
+    .dropdown {
+      display: none;
+      margin-top: 15px;
+      animation: fadeIn 0.4s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .dropdown a {
+      display: block;
+      margin: 10px auto;
+      width: 60%;
+      padding: 10px;
+      background: #f4d7ff;
+      color: #7a4f9a;
+      text-decoration: none;
+      font-size: 17px;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    .dropdown a:hover {
+      background: #e2b7ff;
+    }
+
+    /* TEKS SAMBUTAN */
     .welcome {
       text-align: center;
-      padding: 20px;
+      padding: 30px 40px;
+      animation: fadeSlide 1.2s ease-out;
+    }
+
+    @keyframes fadeSlide {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     .welcome h2 {
-      color: #9d5cb5;
-      font-size: 26px;
-      margin-bottom: 5px;
+      color: #9b4bb8;
+      font-size: 28px;
     }
 
-    .welcome h3 {
+    .welcome strong {
+      color: #844da0;
       font-size: 18px;
-      margin-top: 0;
-      color: #6a4a77;
     }
 
-    .welcome p {
-      color: #705b65;
-      line-height: 1.5;
-      font-size: 16px;
-    }
-
-    /* TOMBOL LIHAT PRODUK */
+    /* TOMBOL PRODUK */
     .btn-produk {
       display: inline-block;
-      margin-top: 15px;
+      background: #d8a6ff;
       padding: 10px 25px;
-      background: #d6a7ff;
       color: white;
-      text-decoration: none;
       border-radius: 25px;
-      font-size: 16px;
-      transition: 0.3s;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: 0.2s;
     }
 
     .btn-produk:hover {
-      background: #b679e8;
+      background: #b97be6;
     }
 
-    /* PRODUK GRID */
+    /* PRODUK */
     .produk-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
       gap: 20px;
-      margin-top: 35px;
+      justify-content: center;
+      margin-top: 40px;
     }
 
     .card {
       background: white;
+      width: 250px;
       padding: 15px;
-      border-radius: 18px;
-      box-shadow: 0 2px 10px rgba(160, 120, 160, 0.2);
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.08);
       text-align: center;
     }
 
     .card img {
       width: 100%;
-      height: 180px;
-      object-fit: cover;
       border-radius: 15px;
     }
 
     .card h3 {
-      margin: 10px 0 5px;
-      color: #81509f;
+      color: #7c4b8d;
+      margin-top: 12px;
     }
 
+    .card p {
+      color: #5b4a5f;
+      font-size: 15px;
+    }
+
+    /* FOOTER */
     footer {
-      margin-top: 40px;
       text-align: center;
+      color: #7a5c7f;
+      margin-top: 50px;
+      padding-bottom: 20px;
       font-size: 14px;
-      color: #69506a;
     }
   </style>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("dropdownMenu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </head>
+
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <!-- NAVBAR -->
-    <nav>
-      <a href="index.html">Beranda</a>
+  <!-- MENU -->
+  <div class="menu-wrapper">
+    <button class="menu-btn" onclick="toggleMenu()">Beranda ☰</button>
+
+    <div id="dropdownMenu" class="dropdown">
       <a href="tentang.html">Tentang</a>
       <a href="produk.html">Produk</a>
       <a href="perawatan.html">Rajut Care</a>
       <a href="kontak.html">Kontak</a>
-    </nav>
-
-    <!-- WELCOME -->
-    <div class="welcome">
-      <h2>Selamat Datang di Toko Online</h2>
-      <h3>Kerajinan Rajut ARYU: Art Rajut Yuri</h3>
-      <p>
-        Kami menjual berbagai produk rajutan handmade berkualitas dengan desain yang elegan,
-        lembut, dan penuh cinta. Setiap karya dibuat dengan teliti oleh tangan kreatif untuk
-        menghadirkan kehangatan dalam setiap rajutan.
-      </p>
-
-      <a href="produk.html" class="btn-produk">Lihat Produk</a>
     </div>
-
-    <!-- PRODUK -->
-    <div class="produk-grid">
-
-      <div class="card">
-        <img src="gantungan.jpg" alt="Keychain Rajut">
-        <h3>Keychain Rajut</h3>
-        <p>Gantungan lucu handmade.</p>
-      </div>
-
-      <div class="card">
-        <img src="kembang.jpg" alt="Bunga Rajut">
-        <h3>Bunga Rajut</h3>
-        <p>Bunga lembut full rajutan.</p>
-      </div>
-
-      <div class="card">
-        <img src="tas putih.jpg" alt="Tas Rajut Elegan">
-        <h3>Tas Rajut Elegan</h3>
-        <p>Model modern & cute.</p>
-      </div>
-
-      <div class="card">
-        <img src="tas kambing.jpg" alt="Tas Custom">
-        <h3>Tas Rajut Custom</h3>
-        <p>Bisa request model.</p>
-      </div>
-
-    </div>
-
-    <footer>
-      © 2025 ARYU — Handmade with Love 🧶💗 <br>
-      Kelompok 2 – XII-I
-    </footer>
   </div>
+
+  <!-- TEKS SAMBUTAN -->
+  <div class="welcome">
+    <h2>Selamat Datang di Toko Online</h2>
+    <strong>Kerajinan Rajut ARYU: Art Rajut Yuri</strong>
+    <p>
+      Kami menjual berbagai produk rajutan handmade berkualitas dengan desain elegan,
+      lembut, dan penuh cinta. Setiap karya dibuat oleh tangan kreatif untuk menghadirkan
+      kehangatan dalam setiap rajutan.
+    </p>
+
+    <a class="btn-produk" href="#produk">Lihat Produk</a>
+  </div>
+
+  <!-- PRODUK -->
+  <div id="produk" class="produk-grid">
+
+    <div class="card">
+      <img src="gantungan.jpg" alt="Keychain Rajut">
+      <h3>Keychain Rajut</h3>
+      <p>Gantungan lucu handmade.</p>
+    </div>
+
+    <div class="card">
+      <img src="kembang.jpg" alt="Bunga Rajut">
+      <h3>Bunga Rajut</h3>
+      <p>Bunga lembut full rajutan.</p>
+    </div>
+
+    <div class="card">
+      <img src="tas putih.jpg" alt="Tas Rajut Elegan">
+      <h3>Tas Rajut Elegan</h3>
+      <p>Model modern & cute.</p>
+    </div>
+
+    <div class="card">
+      <img src="tas kambing.jpg" alt="Tas Rajut Custom">
+      <h3>Tas Rajut Custom</h3>
+      <p>Bisa request model.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 ARYU — Handmade with Love 🧶💗 <br>
+    Kelompok 2 – XII-I
+  </footer>
+
+</div>
 
 </body>
 </html>
