@@ -87,38 +87,67 @@
       transform: scale(1.12);
     }
 
-    /* DESKRIPSI */
     .desc {
       font-size: 14px;
       color: #6d4c71;
       margin-top: 6px;
     }
 
-    /* NAVBAR */
+    /* 🔽 DROPDOWN MENU -- SEPERTI GAMBAR */
     nav {
       text-align: center;
-      background-color: #f3e5f5;
-      padding: 18px 0;
+      padding: 20px 0;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-btn {
+      background-color: #d9b3f0;
+      color: white;
+      padding: 12px 22px;
       font-size: 18px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
       font-weight: bold;
-      border-top: 2px solid #f8bbd0;
-      box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+      transition: 0.2s ease;
     }
 
-    nav a {
-      text-decoration: none;
+    .dropdown-btn:hover {
+      background-color: #c89eea;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border-radius: 15px;
+      margin-top: 10px;
+      overflow: hidden;
+      z-index: 10;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 12px 16px;
       color: #4a3c4c;
-      margin: 0 18px;
-      padding: 10px 14px;
-      border-radius: 10px;
-      transition: 0.25s ease;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.2s ease;
     }
 
-    nav a:hover {
+    .dropdown-content a:hover {
+      background-color: #f3e5f5;
       color: #b565a7;
-      background-color: #fce4ff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transform: translateY(-2px);
+    }
+
+    .show {
+      display: block;
     }
 
     /* FOOTER */
@@ -132,7 +161,6 @@
       margin-top: 30px;
     }
 
-    /* ANIMASI */
     @keyframes fadeIn {
       from {opacity: 0; transform: translateY(20px);}
       to {opacity: 1; transform: translateY(0);}
@@ -141,10 +169,28 @@
 </head>
 
 <body>
+
   <header>
     <h1>Kerajinan Rajut ARYU</h1>
     <p>Produk Rajutan Cantik dengan Sentuhan Cinta 💖</p>
   </header>
+
+  <!-- 🔽 NAVIGASI DROPDOWN -->
+  <nav>
+    <div class="dropdown">
+      <button onclick="toggleDropdown()" class="dropdown-btn">
+        Beranda ▼
+      </button>
+
+      <div id="myDropdown" class="dropdown-content">
+        <a href="index.html">Beranda</a>
+        <a href="tentang.html">Tentang Kami</a>
+        <a href="produk.html">Produk</a>
+        <a href="perawatan.html">Rajut Care</a>
+        <a href="kontak.html">Kontak</a>
+      </div>
+    </div>
+  </nav>
 
   <h2>✨ Daftar Produk Rajut ARYU ✨</h2>
 
@@ -192,17 +238,25 @@
     </tr>
   </table>
 
-  <nav>
-    <a href="index.html">Beranda</a>
-    <a href="tentang.html">Tentang Kami</a>
-    <a href="produk.html">Produk</a>
-    <a href="perawatan.html">Rajut Care</a>
-    <a href="kontak.html">Kontak</a>
-  </nav>
-
   <footer>
-    © 2025 Kerajinan Rajut ARYU. Semua Hak Dilindungi.
+    © 2025 Kerajinan Rajut ARYU - Handmade with Love
   </footer>
+
+  <!-- 🔽 SCRIPT DROPDOWN -->
+  <script>
+    function toggleDropdown() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropdown-btn')) {
+        let dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let d of dropdowns) {
+          d.classList.remove("show");
+        }
+      }
+    }
+  </script>
 
 </body>
 </html>
