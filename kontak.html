@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kontak - Kerajinan Rajut ARYU</title>
+
   <style>
     body {
       font-family: "Times New Roman", serif;
@@ -31,7 +32,6 @@
       overflow: hidden;
     }
 
-    /* Animasi teks header */
     h1 {
       margin: 0;
       font-size: 34px;
@@ -60,7 +60,6 @@
       100% { opacity: 1; }
     }
 
-    /* 🌸 Bagian Utama */
     main {
       text-align: center;
       margin: 40px auto;
@@ -72,7 +71,6 @@
       animation: fadeIn 1s ease;
     }
 
-    /* 🌼 Tabel Informasi Kontak */
     table {
       width: 90%;
       margin: 25px auto;
@@ -115,7 +113,6 @@
       transition: 0.3s;
     }
 
-    /* Form */
     h2 {
       color: #a64ca6;
       margin-bottom: 15px;
@@ -175,40 +172,6 @@
       transform: scale(1.05);
     }
 
-    /* 🌷 Navigasi */
-    nav {
-      background: linear-gradient(to right, #ffd9e8, #e7c6ff, #fff2cc);
-      padding: 12px;
-      border-radius: 12px;
-      text-align: center;
-      margin: 35px auto;
-      max-width: 600px;
-      box-shadow: 0 0 10px rgba(230, 180, 220, 0.4);
-      animation: fadeIn 2s ease;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #7a3b7a;
-      margin: 0 12px;
-      font-weight: bold;
-      transition: 0.3s;
-      display: inline-block;
-      animation: slideLinks 1.5s ease;
-    }
-
-    @keyframes slideLinks {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-      color: #a64ca6;
-      transform: scale(1.1);
-    }
-
-    /* Footer */
     footer {
       text-align: center;
       padding: 15px;
@@ -225,9 +188,73 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    /* ================================
+         🌸 BUTTON MENU (POJOK KANAN)
+       ================================ */
+    .menu-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: linear-gradient(to right, #c79bff, #d59cff, #e2b1ff);
+      color: white;
+      border: none;
+      padding: 12px 22px;
+      font-size: 18px;
+      border-radius: 25px;
+      box-shadow: 0 4px 12px rgba(150, 70, 200, 0.4);
+      cursor: pointer;
+      z-index: 999;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .menu-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .dropdown-menu {
+      position: fixed;
+      top: 70px;
+      right: 20px;
+      background: #ffeafd;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(180, 80, 180, 0.3);
+      display: none;
+      padding: 15px 0;
+      width: 180px;
+      text-align: center;
+      animation: fadeIn 0.3s ease;
+      z-index: 998;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 0;
+      color: #9b50b8;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .dropdown-menu a:hover {
+      background: #f8d9ff;
+    }
   </style>
 </head>
+
 <body>
+
+  <!-- 🌸 BUTTON MENU -->
+  <button class="menu-btn" onclick="toggleMenu()">Menu ▼</button>
+
+  <div class="dropdown-menu" id="dropdownMenu">
+    <a href="index.html">Beranda</a>
+    <a href="tentang.html">Tentang Kami</a>
+    <a href="produk.html">Produk</a>
+    <a href="perawatan.html">Rajut Care</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
 
   <header>
     <h1>Kerajinan Rajut ARYU</h1>
@@ -236,6 +263,7 @@
 
   <main>
     <h2>Informasi Kontak</h2>
+
     <table>
       <tr>
         <th>Jenis Informasi</th>
@@ -256,6 +284,7 @@
     </table>
 
     <h2>Form Pemesanan / Kritik & Saran</h2>
+
     <form>
       <label>Nama:</label>
       <input type="text" name="nama" required />
@@ -270,15 +299,18 @@
     </form>
   </main>
 
-  <nav>
-    <a href="index.html">Beranda</a> |
-    <a href="tentang.html">Tentang Kami</a> |
-    <a href="perawatan.html">Rajut Care</a>
-    <a href="produk.html">Produk
-
- <footer>
-    <p>&copy; 2025 Kerajinan Rajut ARYU - Art Rajut Yuri</p>
+  <footer>
+    <p>&copy; 2025 Kerajinan Rajut ARYU - Handmade With Love 🧶💗</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("dropdownMenu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
 </body>
 </html>
+
 
