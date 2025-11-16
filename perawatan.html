@@ -4,44 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perawatan Rajut</title>
+
     <style>
         body {
-            font-family: "Times New Roman", serif;
+            font-family: "Poppins", sans-serif;
             margin: 0;
             padding: 0;
             background: 
-                linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
+                linear-gradient(135deg, rgba(238,215,255,0.85), rgba(255,228,247,0.85)),
                 url('bg rajut.jpeg.jpeg') center/cover fixed;
             color:#5A2A74;
+            animation: fadeIn 1.3s ease;
         }
 
+        /* HEADER */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
-            position: relative;
-            z-index: 50;
+            padding: 22px 30px;
+            backdrop-filter: blur(8px);
+            background: rgba(255,255,255,0.45);
+            border-bottom: 2px solid rgba(138,77,166,0.25);
+            position: sticky;
+            top: 0;
+            z-index: 2000;
         }
 
-        /* FIXED BUTTON */
+        header h2 {
+            font-size: 26px;
+            font-weight: 700;
+            color:#6A2F91;
+            letter-spacing: 1px;
+        }
+
+        /* MENU BUTTON */
         #menuBtn {
             background: linear-gradient(135deg,#C38CFF,#B377FF,#D8B7FF);
             color: white;
             font-weight: 700;
             padding: 12px 22px;
-            border: 2px solid rgba(255,255,255,0.6); /* supaya terlihat */
-            border-radius: 25px;
+            border: none;
+            border-radius: 30px;
             cursor: pointer;
             box-shadow: 0 4px 14px rgba(138,77,166,0.35);
-            transition: 0.3s;
-            z-index: 2000; /* SUPER FIX */
-            position: relative;
+            transition: 0.25s;
+            font-size: 15px;
         }
 
         #menuBtn:hover {
-            transform: scale(1.08);
-            box-shadow: 0 6px 22px rgba(138,77,166,0.45);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(138,77,166,0.45);
         }
 
         /* DROPDOWN */
@@ -49,55 +62,88 @@
             display: none;
             position: absolute;
             right: 0;
-            top: 60px;
-            background: white;
-            padding: 20px 28px;
+            top: 65px;
+            background: rgba(255,255,255,0.9);
+            padding: 22px 30px;
             border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.20);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
             text-align: right;
-            z-index: 9999;
+            backdrop-filter: blur(10px);
         }
 
         #dropdown a {
             display: block;
-            margin: 10px 0;
+            margin: 12px 0;
             color:#8A4DA6;
             font-weight: 700;
             font-size: 18px;
             text-decoration: none;
+            transition: 0.2s;
         }
 
-        /* SECTION BOX */
+        #dropdown a:hover {
+            transform: translateX(-4px);
+            color:#6A2F91;
+        }
+
+        /* MAIN CARD */
         section {
-            padding: 30px;
-            max-width: 850px;
-            margin: 40px auto;
-            background: rgba(255, 255, 255, 0.78);
-            backdrop-filter: blur(6px);
-            border-radius: 20px;
-            box-shadow: 0 6px 25px rgba(90,42,116,0.20);
-            animation: fadeIn 1.2s ease;
-            position: relative;
-            z-index: 5;
+            padding: 35px;
+            max-width: 900px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(10px);
+            border-radius: 28px;
+            box-shadow: 0 8px 30px rgba(90,42,116,0.18);
+            animation: slideUp 1.1s ease;
         }
 
         h1 {
-            font-size: 26px;
+            font-size: 30px;
+            font-weight: 800;
+            color:#6A2F91;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p, li {
+            font-size: 17px;
+            line-height: 1.7;
             color:#5A2A74;
         }
 
+        ul {
+            background: rgba(238,215,255,0.45);
+            padding: 18px 25px;
+            border-left: 6px solid #C38CFF;
+            border-radius: 10px;
+        }
+
+        /* FOOTER */
         footer {
             text-align:center;
             padding:20px;
-            background: rgba(255,255,255,0.65);
-            backdrop-filter: blur(4px);
+            background: rgba(255,255,255,0.6);
+            backdrop-filter: blur(6px);
             margin-top:40px;
-            color:#5A2A74;
+            color:#6A2F91;
             font-weight:bold;
             border-top: 2px solid rgba(138,77,166,0.25);
         }
+
+        /* ANIMATIONS */
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        @keyframes slideUp {
+            from {transform: translateY(20px); opacity: 0;}
+            to {transform: translateY(0); opacity: 1;}
+        }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -119,38 +165,38 @@
 <section>
     <h1>Cara Merawat Produk Rajut</h1>
 
-    <p><strong>Perawatan rajut</strong> sangat penting untuk menjaga kualitas, bentuk, serta ketahanan produk agar tetap awet dan cantik digunakan dalam jangka panjang. Dengan perawatan yang tepat, benang rajut tidak mudah berbulu, melar, ataupun berubah warna. Berikut panduan lengkap yang dapat membantu Anda merawat produk rajut dengan baik sesuai jenis bahannya.</p>
+    <p><strong>Perawatan rajut</strong> sangat penting untuk menjaga kualitas, bentuk, serta ketahanan produk agar tetap awet dan cantik digunakan dalam jangka panjang. Dengan perawatan yang tepat, benang rajut tidak mudah berbulu, melar, ataupun berubah warna.</p>
 
-    <p><strong>1. Pencucian yang Tepat:</strong> Selalu cuci produk rajut menggunakan tangan karena mesin cuci dapat merusak serat benang. Pilih air dingin atau hangat dan gunakan sabun yang lembut agar warna dan tekstur tetap terjaga.</p>
+    <p><strong>1. Pencucian yang Tepat:</strong> Cuci menggunakan tangan dengan air dingin atau hangat. Gunakan sabun lembut.</p>
 
-    <p><strong>2. Teknik Pengeringan:</strong> Hindari memeras rajutan dengan cara dipelintir. Cukup tekan perlahan hingga air berkurang, lalu keringkan dengan cara dihamparkan di atas handuk. Jangan digantung, karena dapat membuat produk melar.</p>
+    <p><strong>2. Teknik Pengeringan:</strong> Jangan dipelintir. Cukup ditekan perlahan, lalu keringkan secara flat di atas handuk.</p>
 
-    <p><strong>3. Menjaga Bentuk Rajutan:</strong> Saat mengeringkan atau menyimpan, pastikan bentuk rajutan dirapikan. Ini penting untuk mempertahankan struktur pola dan menjaga produk tetap rapi.</p>
+    <p><strong>3. Menjaga Bentuk Rajutan:</strong> Rapikan bentuk saat mengeringkan dan menyimpan.</p>
 
-    <p><strong>4. Penyimpanan:</strong> Simpan produk rajut di tempat yang kering dan bersih. Hindari menumpuk terlalu berat agar rajutan tidak berubah bentuk. Lebih baik lipat dengan rapi daripada menggantung.</p>
+    <p><strong>4. Penyimpanan:</strong> Simpan di tempat kering, jangan digantung terlalu lama.</p>
 
-    <p><strong>5. Hindari Paparan Panas:</strong> Produk rajut sangat sensitif terhadap suhu tinggi. Jangan dijemur langsung di bawah matahari terik dan hindari penggunaan setrika kecuali benar-benar diperlukan dengan suhu sangat rendah.</p>
+    <p><strong>5. Hindari Panas:</strong> Jangan dijemur di bawah matahari terik, hindari setrika panas.</p>
 
     <ul>
-        <li>Cuci dengan tangan, jangan menggunakan mesin cuci.</li>
-        <li>Gunakan air dingin atau hangat.</li>
-        <li>Gunakan sabun lembut atau khusus kain rajut.</li>
-        <li>Jangan diperas terlalu kuat, cukup ditekan perlahan.</li>
-        <li>Keringkan secara flat, jangan digantung agar tidak melar.</li>
+        <li>Cuci tangan, bukan mesin.</li>
+        <li>Gunakan air dingin/hangat.</li>
+        <li>Gunakan sabun lembut.</li>
+        <li>Tekan perlahan, jangan peras kuat.</li>
+        <li>Keringkan flat.</li>
     </ul>
 
-    <p><strong>6. Menghindari Bulu (Fuzzing):</strong> Beberapa jenis benang rajut mudah berbulu setelah lama digunakan. Untuk mengurangi bulu halus, gunakan gunting kecil atau fabric shaver secara perlahan.</p>
+    <p><strong>6. Menghindari Bulu:</strong> Gunakan gunting kecil atau fabric shaver secara lembut.</p>
 
-    <p><strong>7. Perawatan Berdasarkan Jenis Benang:</strong><br>
-        • <em>Benang Katun:</em> Lebih kuat dan tidak mudah melar.<br>
-        • <em>Benang Acrylic:</em> Ringan dan hangat, sensitif panas.<br>
-        • <em>Benang Wol:</em> Lembut tetapi mudah menyusut, gunakan air dingin.</p>
+    <p><strong>7. Perawatan Berdasarkan Benang:</strong><br>
+        • <em>Katun:</em> Kuat dan stabil.<br>
+        • <em>Acrylic:</em> Ringan, sensitif panas.<br>
+        • <em>Wol:</em> Gunakan air dingin.</p>
 
-    <p><strong>8. Menghilangkan Bau Tidak Sedap:</strong> Angin-anginkan rajutan di tempat teduh atau gunakan baking soda.</p>
+    <p><strong>8. Menghilangkan Bau:</strong> Angin-anginkan atau gunakan baking soda.</p>
 
-    <p><strong>9. Perawatan Saat Tidak Dipakai Lama:</strong> Simpan dalam kantong kain dan tambahkan silica gel.</p>
+    <p><strong>9. Saat Tidak Dipakai Lama:</strong> Simpan di kantong kain + silica gel.</p>
 
-    <p><strong>10. Menjaga Warna Tetap Cerah:</strong> Hindari pemutih, gunakan sedikit cuka untuk mengembalikan warna.</p>
+    <p><strong>10. Menjaga Warna:</strong> Hindari pemutih. Tambahkan sedikit cuka untuk menjaga warna.</p>
 </section>
 
 <footer>
@@ -158,12 +204,12 @@
 </footer>
 
 <script>
-const btn = document.getElementById('menuBtn');
-const dd = document.getElementById('dropdown');
+    const btn = document.getElementById('menuBtn');
+    const dd = document.getElementById('dropdown');
 
-btn.addEventListener('click', ()=>{
-    dd.style.display = dd.style.display === 'block' ? 'none' : 'block';
-});
+    btn.addEventListener('click', () => {
+        dd.style.display = dd.style.display === 'block' ? 'none' : 'block';
+    });
 </script>
 
 </body>
