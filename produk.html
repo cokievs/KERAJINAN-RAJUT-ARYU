@@ -40,7 +40,7 @@
       font-size: 18px;
     }
 
-    /* MENU DROPDOWN POJOK KANAN ATAS */
+    /* DROPDOWN MENU */
     .dropdown {
       position: fixed;
       top: 18px;
@@ -106,7 +106,7 @@
       color: #7b4b86;
     }
 
-    /* TABEL TRANSPARAN */
+    /* KONTAINER TABEL */
     .table-container {
       width: 92%;
       margin: 40px auto;
@@ -128,7 +128,6 @@
       font-size: 20px;
       padding: 16px;
       border-radius: 10px;
-      backdrop-filter: blur(8px);
     }
 
     td {
@@ -138,7 +137,6 @@
       border-radius: 14px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: 0.3s ease;
-      backdrop-filter: blur(8px);
     }
 
     tr:hover td {
@@ -155,6 +153,14 @@
 
     td img:hover {
       transform: scale(1.15);
+    }
+
+    /* DESKRIPSI PRODUK */
+    .desc {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #704b79;
+      font-style: italic;
     }
 
     footer {
@@ -211,24 +217,27 @@
     </tr>
 
     <tr>
-      <td><img src="bunga rajut.jpeg">
-      <div class="desc">Bunga cantik, awet & tidak layu.</div>
+      <td>
+        <img src="bunga rajut.jpeg">
+        <div class="desc">Bunga cantik, awet & tidak layu.</div>
       </td>
       <td>Bunga Rajut</td>
       <td>Rp 30.000</td>
     </tr>
 
     <tr>
-      <td><img src="tas rajut.jpg"></td>
-      <div class="desc">Tas elegan, kuat, dan cocok untuk seharian.</div>
-     </td>
+      <td>
+        <img src="tas rajut.jpg">
+        <div class="desc">Tas elegan, kuat, dan cocok untuk dipakai seharian.</div>
+      </td>
       <td>Tas Rajut</td>
       <td>Rp 90.000</td>
     </tr>
 
     <tr>
-      <td><img src="tas kambing.jpg"></td>
-     <div class="desc">Bisa request warna, ukuran, dan model.</div>
+      <td>
+        <img src="tas kambing.jpg">
+        <div class="desc">Bisa request warna, ukuran, dan model sesuai keinginan.</div>
       </td>
       <td>Tas Rajut Custom</td>
       <td>Rp 40.000 – Rp 100.000</td>
@@ -237,7 +246,7 @@
 </div>
 
 <footer>
-  © 2025 Kerajinan Rajut ARYU - Handmade With Love 💖
+  © 2025 Kerajinan Rajut ARYU - Handmade With Love 🧶💗
 </footer>
 
 <script>
@@ -255,5 +264,3 @@ window.onclick = function(e) {
 
 </body>
 </html>
-
-
