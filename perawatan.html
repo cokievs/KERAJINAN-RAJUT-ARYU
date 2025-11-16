@@ -6,10 +6,11 @@
     <title>Perawatan Rajut</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Tmes New Roman, serif;
             margin: 0;
             padding: 0;
-            background:#F7F2FF;
+            background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
+            url('bg rajut.jpeg.jpeg') center/cover fixed;
             color:#5A2A74;
         }
         header {
@@ -19,14 +20,19 @@
             padding: 20px;
         }
         #menuBtn {
-            background: linear-gradient(135deg,#C38CFF,#B377FF);
+            background: linear-gradient(135deg,#C38CFF,#B377FF,#D8B7FF);
             color: white;
             font-weight: 700;
-            padding: 10px 18px;
+            padding: 12px 22px;
             border: none;
-            border-radius: 20px;
+            border-radius: 25px;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(138,77,166,0.25);
+            box-shadow: 0 4px 14px rgba(138,77,166,0.30);
+            transition: 0.3s;
+        }
+        #menuBtn:hover {
+            transform: scale(1.07);
+            box-shadow: 0 6px 20px rgba(138,77,166,0.45);
         }
         #dropdown {
             display: none;
@@ -49,6 +55,13 @@
         }
         section {
             padding: 30px;
+            max-width: 850px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.78);
+            backdrop-filter: blur(6px);
+            border-radius: 20px;
+            box-shadow: 0 6px 25px rgba(90,42,116,0.20);
+            animation: fadeIn 1.2s ease;
         }
         h1 {
             font-size: 26px;
@@ -57,10 +70,12 @@
         footer {
             text-align:center;
             padding:20px;
-            background:#EAD9FF;
+            background: rgba(255,255,255,0.65);
+            backdrop-filter: blur(4px);
             margin-top:40px;
             color:#5A2A74;
             font-weight:bold;
+            border-top: 2px solid rgba(138,77,166,0.25);
         }
     </style>
 </head>
