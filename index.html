@@ -1,8 +1,11 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Kerajinan Rajut ARYU: Art Rajut Yuri</title><style>
+<title>Kerajinan Rajut ARYU: Art Rajut Yuri</title>
+
+<style>
   body {
     margin: 0;
     font-family: "Times New Roman", serif;
@@ -32,21 +35,23 @@
     margin-left: auto;
   }
 
+  /* 🔥 TOMBOL MENU BARU – lebih kelihatan */
   .menu-btn {
-    background: #dca7e8;
+    background: #b06ccf;
     padding: 10px 18px;
     border-radius: 25px;
     border: none;
     cursor: pointer;
-    color: pink soft;
+    color: white;
     font-size: 16px;
+    font-weight: bold;
   }
 
   .menu-btn:hover {
-    background: #c488d8;
+    background: #9a55bd;
   }
 
-  /* Dropdown */
+  /* DROPDOWN */
   .dropdown {
     display: none;
     position: absolute;
@@ -74,7 +79,7 @@
     border-bottom: none;
   }
 
-  /* KONTEN */
+  /* KONTEN UTAMA */
   .container {
     max-width: 900px;
     margin: 40px auto;
@@ -96,22 +101,23 @@
     font-size: 17px;
   }
 
-  /* Tombol Produk */
+  /* 🔥 TOMBOL PRODUK BARU */
   .btn-produk {
     display: block;
     width: 160px;
     margin: 20px auto;
     padding: 12px;
-    background: #dca7e8;
+    background: #b06ccf; 
     color: white;
     font-size: 17px;
     border-radius: 25px;
     text-align: center;
     text-decoration: none;
+    font-weight: bold;
   }
 
   .btn-produk:hover {
-    background: #c488d8;
+    background: #9a55bd;
   }
 
   /* GRID PRODUK */
@@ -148,14 +154,25 @@
     color: #7a6d80;
     font-size: 14px;
   }
-</style><script>
+</style>
+
+<script>
 function toggleMenu() {
   const menu = document.getElementById("dropdownMenu");
   menu.style.display = menu.style.display === "block" ? "none" : "block";
 }
-</script></head><body><!-- HEADER + MENU --><div class="header">
-  <div class="brand">ARYU Crochet</div>  <nav>
-    <button class="menu-btn" onclick="toggleMenu()">Menu▼</button>
+</script>
+
+</head>
+
+<body>
+
+<!-- HEADER + MENU -->
+<div class="header">
+  <div class="brand">ARYU Crochet</div>
+
+  <nav>
+    <button class="menu-btn" onclick="toggleMenu()">Menu ▼</button>
     <div class="dropdown" id="dropdownMenu">
       <a href="tentang.html">Tentang Kami</a>
       <a href="produk.html">Produk</a>
@@ -163,41 +180,52 @@ function toggleMenu() {
       <a href="kontak.html">Kontak</a>
     </div>
   </nav>
-</div><!-- KONTEN UTAMA --><div class="container">
+</div>
+
+<!-- KONTEN UTAMA -->
+<div class="container">
   <h2>Selamat Datang di Toko Online</h2>
-  <h3 style="text-align:center; color:#8a4c9c;">Kerajinan Rajut ARYU: Art Rajut Yuri</h3>  <p>
+  <h3 style="text-align:center; color:#8a4c9c;">Kerajinan Rajut ARYU: Art Rajut Yuri</h3>
+
+  <p>
     Kami menjual berbagai produk rajutan handmade berkualitas dengan desain yang elegan, lembut, dan penuh cinta.  
     Setiap karya dibuat dengan teliti oleh tangan kreatif untuk menghadirkan kehangatan dalam setiap rajutan.
-  </p><a href="produk.html" class="btn-produk">Lihat Produk</a>
+  </p>
 
-  <!-- PRODUK -->  <div class="products">
+  <a href="produk.html" class="btn-produk">Lihat Produk</a>
+
+  <!-- PRODUK -->
+  <div class="products">
     <div class="card">
       <img src="gantungan.jpg" alt="Keychain Rajut">
       <h3>Keychain Rajut</h3>
       <p>Gantungan lucu handmade.</p>
-    </div><div class="card">
-  <img src="kembang.jpg" alt="Bunga Rajut">
-  <h3>Bunga Rajut</h3>
-  <p>Bunga lembut full rajutan.</p>
-</div>
+    </div>
 
-<div class="card">
-  <img src="tas putih.jpg" alt="Tas Rajut">
-  <h3>Tas Rajut Elegan</h3>
-  <p>Model modern & cute.</p>
-</div>
+    <div class="card">
+      <img src="kembang.jpg" alt="Bunga Rajut">
+      <h3>Bunga Rajut</h3>
+      <p>Bunga lembut full rajutan.</p>
+    </div>
 
-<div class="card">
-  <img src="tas kambing.jpg" alt="Tas Custom">
-  <h3>Tas Rajut Custom</h3>
-  <p>Bisa request model.</p>
-</div>
+    <div class="card">
+      <img src="tas putih.jpg" alt="Tas Rajut">
+      <h3>Tas Rajut Elegan</h3>
+      <p>Model modern & cute.</p>
+    </div>
+
+    <div class="card">
+      <img src="tas kambing.jpg" alt="Tas Custom">
+      <h3>Tas Rajut Custom</h3>
+      <p>Bisa request model.</p>
+    </div>
 
   </div>
-</div><footer>
+</div>
+
+<footer>
   © 2025 ARYU — Handmade with Love 🧶💗 <br> Kelompok 2 – XII-I
-</footer></body>
+</footer>
+
+</body>
 </html>
-
-
-
