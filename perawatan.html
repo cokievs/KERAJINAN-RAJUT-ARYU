@@ -6,45 +6,58 @@
     <title>Perawatan Rajut</title>
     <style>
         body {
-            font-family: Tmes New Roman, serif;
+            font-family: "Times New Roman", serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
-            url('bg rajut.jpeg.jpeg') center/cover fixed;
+            background: 
+                linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
+                url('bg rajut.jpeg.jpeg') center/cover fixed;
             color:#5A2A74;
         }
+
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
+            position: relative;
+            z-index: 50;
         }
+
+        /* FIXED BUTTON */
         #menuBtn {
             background: linear-gradient(135deg,#C38CFF,#B377FF,#D8B7FF);
             color: white;
             font-weight: 700;
             padding: 12px 22px;
-            border: none;
+            border: 2px solid rgba(255,255,255,0.6); /* supaya terlihat */
             border-radius: 25px;
             cursor: pointer;
-            box-shadow: 0 4px 14px rgba(138,77,166,0.30);
+            box-shadow: 0 4px 14px rgba(138,77,166,0.35);
             transition: 0.3s;
+            z-index: 2000; /* SUPER FIX */
+            position: relative;
         }
+
         #menuBtn:hover {
-            transform: scale(1.07);
-            box-shadow: 0 6px 20px rgba(138,77,166,0.45);
+            transform: scale(1.08);
+            box-shadow: 0 6px 22px rgba(138,77,166,0.45);
         }
+
+        /* DROPDOWN */
         #dropdown {
             display: none;
             position: absolute;
-            right: 20px;
-            top: 70px;
+            right: 0;
+            top: 60px;
             background: white;
             padding: 20px 28px;
             border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.20);
             text-align: right;
+            z-index: 9999;
         }
+
         #dropdown a {
             display: block;
             margin: 10px 0;
@@ -53,6 +66,8 @@
             font-size: 18px;
             text-decoration: none;
         }
+
+        /* SECTION BOX */
         section {
             padding: 30px;
             max-width: 850px;
@@ -62,11 +77,15 @@
             border-radius: 20px;
             box-shadow: 0 6px 25px rgba(90,42,116,0.20);
             animation: fadeIn 1.2s ease;
+            position: relative;
+            z-index: 5;
         }
+
         h1 {
             font-size: 26px;
             color:#5A2A74;
         }
+
         footer {
             text-align:center;
             padding:20px;
@@ -83,8 +102,10 @@
 
 <header>
     <h2>Perawatan Rajut</h2>
+
     <div style="position:relative;">
         <button id="menuBtn">Menu ▼</button>
+
         <div id="dropdown">
             <a href="index.html">Beranda</a>
             <a href="tentang.html">Tentang Kami</a>
@@ -97,6 +118,7 @@
 
 <section>
     <h1>Cara Merawat Produk Rajut</h1>
+
     <p><strong>Perawatan rajut</strong> sangat penting untuk menjaga kualitas, bentuk, serta ketahanan produk agar tetap awet dan cantik digunakan dalam jangka panjang. Dengan perawatan yang tepat, benang rajut tidak mudah berbulu, melar, ataupun berubah warna. Berikut panduan lengkap yang dapat membantu Anda merawat produk rajut dengan baik sesuai jenis bahannya.</p>
 
     <p><strong>1. Pencucian yang Tepat:</strong> Selalu cuci produk rajut menggunakan tangan karena mesin cuci dapat merusak serat benang. Pilih air dingin atau hangat dan gunakan sabun yang lembut agar warna dan tekstur tetap terjaga.</p>
@@ -108,7 +130,7 @@
     <p><strong>4. Penyimpanan:</strong> Simpan produk rajut di tempat yang kering dan bersih. Hindari menumpuk terlalu berat agar rajutan tidak berubah bentuk. Lebih baik lipat dengan rapi daripada menggantung.</p>
 
     <p><strong>5. Hindari Paparan Panas:</strong> Produk rajut sangat sensitif terhadap suhu tinggi. Jangan dijemur langsung di bawah matahari terik dan hindari penggunaan setrika kecuali benar-benar diperlukan dengan suhu sangat rendah.</p>
-    <p>Merawat produk rajut sangat penting agar bentuk dan kualitasnya tetap terjaga. Berikut beberapa tips yang bisa dilakukan:</p>
+
     <ul>
         <li>Cuci dengan tangan, jangan menggunakan mesin cuci.</li>
         <li>Gunakan air dingin atau hangat.</li>
@@ -116,19 +138,19 @@
         <li>Jangan diperas terlalu kuat, cukup ditekan perlahan.</li>
         <li>Keringkan secara flat, jangan digantung agar tidak melar.</li>
     </ul>
-    <p><strong>6. Menghindari Bulu (Fuzzing):</strong> Beberapa jenis benang rajut mudah berbulu setelah lama digunakan. Untuk mengurangi bulu halus, gunakan gunting kecil atau fabric shaver secara perlahan. Jangan menarik bulu dengan tangan karena dapat merusak serat.</p>
+
+    <p><strong>6. Menghindari Bulu (Fuzzing):</strong> Beberapa jenis benang rajut mudah berbulu setelah lama digunakan. Untuk mengurangi bulu halus, gunakan gunting kecil atau fabric shaver secara perlahan.</p>
 
     <p><strong>7. Perawatan Berdasarkan Jenis Benang:</strong><br>
-    • <em>Benang Katun:</em> Lebih kuat dan tidak mudah melar, namun tetap hindari mesin cuci.<br>
-    • <em>Benang Acrylic:</em> Ringan dan hangat tapi sensitif panas, jadi jauhkan dari setrika dan air panas.<br>
-    • <em>Benang Wol:</em> Sangat lembut tetapi mudah menyusut, gunakan air dingin saja saat mencuci.</p>
+        • <em>Benang Katun:</em> Lebih kuat dan tidak mudah melar.<br>
+        • <em>Benang Acrylic:</em> Ringan dan hangat, sensitif panas.<br>
+        • <em>Benang Wol:</em> Lembut tetapi mudah menyusut, gunakan air dingin.</p>
 
-    <p><strong>8. Menghilangkan Bau Tidak Sedap:</strong> Jika rajutan lembap atau disimpan terlalu lama, bau kurang sedap bisa muncul. Angin‑anginkan di tempat teduh, atau gunakan sedikit baking soda dalam wadah tertutup selama beberapa jam.</p>
+    <p><strong>8. Menghilangkan Bau Tidak Sedap:</strong> Angin-anginkan rajutan di tempat teduh atau gunakan baking soda.</p>
 
-    <p><strong>9. Perawatan Saat Tidak Dipakai Lama:</strong> Jika produk jarang digunakan, pastikan disimpan dalam kantong kain, bukan plastik, agar udara tetap mengalir dan benang tidak lembap. Tambahkan kamper atau silica gel untuk mencegah jamur.</p>
+    <p><strong>9. Perawatan Saat Tidak Dipakai Lama:</strong> Simpan dalam kantong kain dan tambahkan silica gel.</p>
 
-    <p><strong>10. Menjaga Warna Tetap Cerah:</strong> Hindari deterjen keras dan pemutih. Jika warna mulai kusam, cukup rendam sebentar dengan air hangat bercampur sedikit cuka untuk mengembalikan kilau alami benang.</p>
-
+    <p><strong>10. Menjaga Warna Tetap Cerah:</strong> Hindari pemutih, gunakan sedikit cuka untuk mengembalikan warna.</p>
 </section>
 
 <footer>
@@ -138,6 +160,7 @@
 <script>
 const btn = document.getElementById('menuBtn');
 const dd = document.getElementById('dropdown');
+
 btn.addEventListener('click', ()=>{
     dd.style.display = dd.style.display === 'block' ? 'none' : 'block';
 });
