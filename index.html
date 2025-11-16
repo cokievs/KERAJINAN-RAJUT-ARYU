@@ -21,6 +21,8 @@
     background: rgba(255, 240, 248, 0.85);
     backdrop-filter: blur(4px);
     box-shadow: 0 2px 10px rgba(180, 100, 160, 0.2);
+    position: relative;
+    z-index: 10;
   }
 
   .brand {
@@ -29,54 +31,60 @@
     color: #8a4c9c;
   }
 
-  /* MENU */
   nav {
-    position: relative;
     margin-left: auto;
+    position: relative;
   }
 
-  /* 🔥 TOMBOL MENU BARU – lebih kelihatan */
+  /* 🔥 BUTTON MENU GRADIENT (PERSIS SEPERTI FOTO) */
   .menu-btn {
-    background: #b06ccf;
-    padding: 10px 18px;
-    border-radius: 25px;
+    background: linear-gradient(135deg, #ffb0f4, #c48bff);
+    padding: 12px 22px;
+    border-radius: 28px;
     border: none;
     cursor: pointer;
     color: white;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 17px;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(180, 90, 200, 0.25);
+    transition: 0.2s;
   }
 
   .menu-btn:hover {
-    background: #9a55bd;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(180, 90, 200, 0.3);
   }
 
-  /* DROPDOWN */
+  /* 🔽 DROPDOWN BARU */
   .dropdown {
     display: none;
     position: absolute;
     right: 0;
-    margin-top: 10px;
-    background: #fff7fc;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(100, 0, 120, 0.2);
-    overflow: hidden;
+    margin-top: 12px;
+    background: rgba(255, 245, 255, 0.95);
+    padding: 10px 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(150, 90, 170, 0.25);
+    backdrop-filter: blur(6px);
+    width: 170px;
   }
 
   .dropdown a {
     display: block;
-    padding: 12px 18px;
+    padding: 14px 24px;
+    font-size: 17px;
+    font-weight: 700;
     text-decoration: none;
-    color: #7b4c8e;
-    border-bottom: 1px solid #f3d8f7;
-  }
-
-  .dropdown a:hover {
-    background: #f6e0ff;
+    color: #8a4c9c;
+    border-bottom: 1px solid #f3d9ff;
   }
 
   .dropdown a:last-child {
     border-bottom: none;
+  }
+
+  .dropdown a:hover {
+    background: rgba(240, 210, 255, 0.5);
   }
 
   /* KONTEN UTAMA */
@@ -93,21 +101,22 @@
   h2 {
     text-align: center;
     color: #8a4c9c;
+    font-size: 30px;
   }
 
   p {
-    text-align: center; 
+    text-align: center;
     color: #6a5a6f;
     font-size: 17px;
   }
 
-  /* 🔥 TOMBOL PRODUK BARU */
+  /* PRODUK BUTTON */
   .btn-produk {
     display: block;
     width: 160px;
     margin: 20px auto;
     padding: 12px;
-    background: #b06ccf; 
+    background: #b06ccf;
     color: white;
     font-size: 17px;
     border-radius: 25px;
@@ -167,12 +176,13 @@ function toggleMenu() {
 
 <body>
 
-<!-- HEADER + MENU -->
+<!-- HEADER + BUTTON MENU -->
 <div class="header">
   <div class="brand">ARYU Crochet</div>
 
   <nav>
     <button class="menu-btn" onclick="toggleMenu()">Menu ▼</button>
+
     <div class="dropdown" id="dropdownMenu">
       <a href="tentang.html">Tentang Kami</a>
       <a href="produk.html">Produk</a>
@@ -182,14 +192,16 @@ function toggleMenu() {
   </nav>
 </div>
 
-<!-- KONTEN UTAMA -->
+<!-- KONTEN -->
 <div class="container">
   <h2>Selamat Datang di Toko Online</h2>
   <h3 style="text-align:center; color:#8a4c9c;">Kerajinan Rajut ARYU: Art Rajut Yuri</h3>
 
   <p>
-    Kami menjual berbagai produk rajutan handmade berkualitas dengan desain yang elegan, lembut, dan penuh cinta.  
-    Setiap karya dibuat dengan teliti oleh tangan kreatif untuk menghadirkan kehangatan dalam setiap rajutan.
+    Kami menjual berbagai produk rajutan handmade berkualitas dengan desain
+    yang elegan, lembut, dan penuh cinta.  
+    Setiap karya dibuat dengan teliti oleh tangan kreatif untuk menghadirkan
+    kehangatan dalam setiap rajutan.
   </p>
 
   <a href="produk.html" class="btn-produk">Lihat Produk</a>
@@ -197,34 +209,33 @@ function toggleMenu() {
   <!-- PRODUK -->
   <div class="products">
     <div class="card">
-      <img src="gantungan.jpg" alt="Keychain Rajut">
+      <img src="gantungan.jpg" alt="Keychain Rajut" />
       <h3>Keychain Rajut</h3>
       <p>Gantungan lucu handmade.</p>
     </div>
 
     <div class="card">
-      <img src="kembang.jpg" alt="Bunga Rajut">
+      <img src="kembang.jpg" alt="Bunga Rajut" />
       <h3>Bunga Rajut</h3>
       <p>Bunga lembut full rajutan.</p>
     </div>
 
     <div class="card">
-      <img src="tas putih.jpg" alt="Tas Rajut">
+      <img src="tas putih.jpg" alt="Tas Rajut" />
       <h3>Tas Rajut Elegan</h3>
       <p>Model modern & cute.</p>
     </div>
 
     <div class="card">
-      <img src="tas kambing.jpg" alt="Tas Custom">
+      <img src="tas kambing.jpg" alt="Tas Custom" />
       <h3>Tas Rajut Custom</h3>
       <p>Bisa request model.</p>
     </div>
-
   </div>
 </div>
 
 <footer>
-  © 2025 ARYU — Handmade with Love 🧶💗 <br> Kelompok 2 – XII-I
+  © 2025 ARYU — Handmade with Love 🧶💗 <br /> Kelompok 2 – XII-I
 </footer>
 
 </body>
