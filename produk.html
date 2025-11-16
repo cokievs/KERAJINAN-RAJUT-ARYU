@@ -37,71 +37,12 @@
       font-size: 18px;
     }
 
-    /* JUDUL PRODUK */
-    h2 {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 28px;
-      color: #7b4b86;
-      text-shadow: 1px 1px 4px rgba(255, 182, 193, 0.7);
-      animation: fadeIn 1.2s ease;
-    }
-
-    /* TABEL PRODUK */
-    table {
-      width: 90%;
-      margin: 40px auto;
-      border-collapse: collapse;
-      background-color: #fffafc;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-      border-radius: 18px;
-      overflow: hidden;
-      animation: fadeIn 1s ease;
-    }
-
-    th, td {
-      padding: 16px;
-      text-align: center;
-      border-bottom: 1px solid #f3c5d3;
-      transition: background-color 0.3s ease;
-    }
-
-    th {
-      background: linear-gradient(90deg, #f3d1e2, #f6e0ef);
-      color: #4a3c4c;
-      font-size: 20px;
-    }
-
-    tr:hover td {
-      background-color: #fce4ec;
-      cursor: pointer;
-    }
-
-    td img {
-      border-radius: 12px;
-      transition: transform 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    }
-
-    td img:hover {
-      transform: scale(1.12);
-    }
-
-    .desc {
-      font-size: 14px;
-      color: #6d4c71;
-      margin-top: 6px;
-    }
-
-    /* 🔽 DROPDOWN MENU -- SEPERTI GAMBAR */
-    nav {
-      text-align: center;
-      padding: 20px 0;
-    }
-
+    /* DROPDOWN POJOK KANAN */
     .dropdown {
-      position: relative;
-      display: inline-block;
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      z-index: 20;
     }
 
     .dropdown-btn {
@@ -123,13 +64,13 @@
     .dropdown-content {
       display: none;
       position: absolute;
+      right: 0;
       background-color: #ffffff;
-      min-width: 160px;
+      min-width: 170px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       border-radius: 15px;
       margin-top: 10px;
       overflow: hidden;
-      z-index: 10;
     }
 
     .dropdown-content a {
@@ -148,6 +89,71 @@
 
     .show {
       display: block;
+    }
+
+    /* JUDUL PRODUK */
+    h2 {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 30px;
+      color: #7b4b86;
+      text-shadow: 1px 1px 4px rgba(255, 182, 193, 0.7);
+      animation: fadeIn 1.2s ease;
+    }
+
+    /* TABEL LEBIH MENARIK */
+    .table-container {
+      width: 92%;
+      margin: 40px auto;
+      background: white;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+      animation: fadeIn 1s ease;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 12px;
+    }
+
+    th {
+      background: linear-gradient(90deg, #f3d1e2, #f6e0ef);
+      padding: 16px;
+      color: #4a3c4c;
+      font-size: 20px;
+      border-radius: 10px;
+    }
+
+    td {
+      background: #fffafc;
+      padding: 18px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.25s ease;
+    }
+
+    tr:hover td {
+      background-color: #fce4ec;
+      transform: scale(1.02);
+    }
+
+    td img {
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    td img:hover {
+      transform: scale(1.15);
+    }
+
+    .desc {
+      font-size: 14px;
+      margin-top: 6px;
+      color: #6d4c71;
     }
 
     /* FOOTER */
@@ -170,79 +176,83 @@
 
 <body>
 
+  <!-- MENU DROPDOWN POJOK KANAN -->
+  <div class="dropdown">
+    <button onclick="toggleDropdown()" class="dropdown-btn">
+      Menu ▼
+    </button>
+
+    <div id="myDropdown" class="dropdown-content">
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang Kami</a>
+      <a href="produk.html">Produk</a>
+      <a href="perawatan.html">Rajut Care</a>
+      <a href="kontak.html">Kontak</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
   <header>
     <h1>Kerajinan Rajut ARYU</h1>
     <p>Produk Rajutan Cantik dengan Sentuhan Cinta 💖</p>
   </header>
 
-  <!-- 🔽 NAVIGASI DROPDOWN -->
-  <nav>
-    <div class="dropdown">
-      <button onclick="toggleDropdown()" class="dropdown-btn">
-        Produk ▼
-      </button>
-
-      <div id="myDropdown" class="dropdown-content">
-        <a href="index.html">Beranda</a>
-        <a href="tentang.html">Tentang Kami</a>
-        <a href="produk.html">Produk</a>
-        <a href="perawatan.html">Rajut Care</a>
-        <a href="kontak.html">Kontak</a>
-      </div>
-    </div>
-  </nav>
-
+  <!-- JUDUL PRODUK -->
   <h2>✨ Daftar Produk Rajut ARYU ✨</h2>
 
-  <table>
-    <tr>
-      <th>Gambar</th>
-      <th>Nama Produk</th>
-      <th>Harga</th>
-    </tr>
+  <!-- TABEL PRODUK -->
+  <div class="table-container">
+    <table>
+      <tr>
+        <th>Gambar</th>
+        <th>Nama Produk</th>
+        <th>Harga</th>
+      </tr>
 
-    <tr>
-      <td>
-        <img src="gantungan.jpg" width="100">
-        <div class="desc">Gantungan lucu, cocok untuk tas & kunci.</div>
-      </td>
-      <td>Keychain Rajut</td>
-      <td>Rp 15.000</td>
-    </tr>
+      <tr>
+        <td>
+          <img src="gantungan.jpg" width="100">
+          <div class="desc">Gantungan lucu, cocok untuk tas & kunci.</div>
+        </td>
+        <td>Keychain Rajut</td>
+        <td>Rp 15.000</td>
+      </tr>
 
-    <tr>
-      <td>
-        <img src="bunga rajut.jpeg" width="100">
-        <div class="desc">Bunga cantik, awet & tidak layu.</div>
-      </td>
-      <td>Bunga Rajut</td>
-      <td>Rp 30.000</td>
-    </tr>
+      <tr>
+        <td>
+          <img src="bunga rajut.jpeg" width="100">
+          <div class="desc">Bunga cantik, awet & tidak layu.</div>
+        </td>
+        <td>Bunga Rajut</td>
+        <td>Rp 30.000</td>
+      </tr>
 
-    <tr>
-      <td>
-        <img src="tas rajut.jpg" width="100">
-        <div class="desc">Tas elegan, kuat, dan cocok untuk harian.</div>
-      </td>
-      <td>Tas Rajut</td>
-      <td>Rp 90.000</td>
-    </tr>
+      <tr>
+        <td>
+          <img src="tas rajut.jpg" width="100">
+          <div class="desc">Tas elegan, kuat, dan cocok untuk harian.</div>
+        </td>
+        <td>Tas Rajut</td>
+        <td>Rp 90.000</td>
+      </tr>
 
-    <tr>
-      <td>
-        <img src="tas kambing.jpg" width="100">
-        <div class="desc">Bisa request warna, ukuran, dan model.</div>
-      </td>
-      <td>Tas Rajut Custom</td>
-      <td>Rp 40.000 – Rp 100.000</td>
-    </tr>
-  </table>
+      <tr>
+        <td>
+          <img src="tas kambing.jpg" width="100">
+          <div class="desc">Bisa request warna, ukuran, dan model.</div>
+        </td>
+        <td>Tas Rajut Custom</td>
+        <td>Rp 40.000 – Rp 100.000</td>
+      </tr>
+    </table>
+  </div>
 
+  <!-- FOOTER -->
   <footer>
     © 2025 Kerajinan Rajut ARYU - Handmade with Love
   </footer>
 
-  <!-- 🔽 SCRIPT DROPDOWN -->
+  <!-- SCRIPT DROPDOWN -->
   <script>
     function toggleDropdown() {
       document.getElementById("myDropdown").classList.toggle("show");
@@ -257,7 +267,5 @@
       }
     }
   </script>
-
 </body>
 </html>
-
