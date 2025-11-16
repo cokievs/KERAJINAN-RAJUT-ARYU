@@ -5,25 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kerajinan Rajut ARYU: Art Rajut Yuri</title>
 
-  <!-- Font Cute -->
+  <!-- FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: url('background-rajut.png');
+      background: url('bg-rajut.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
       font-family: 'Poppins', sans-serif;
     }
 
-    /* WRAPPER PUTIH */
     .container {
       max-width: 950px;
       margin: 40px auto;
-      background: rgba(255, 249, 246, 0.9);
+      background: rgba(255, 249, 246, 0.88);
       border-radius: 30px;
       padding: 20px 0 50px;
       box-shadow: 0 0 20px rgba(255, 180, 220, 0.3);
@@ -31,10 +30,7 @@
     }
 
     /* NAVBAR */
-    nav {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+    nav { text-align: center; margin-bottom: 20px; }
     nav a {
       margin: 0 15px;
       text-decoration: none;
@@ -42,47 +38,105 @@
       font-weight: 600;
       font-size: 16px;
     }
-    nav a:hover {
-      color: #8a5a9c;
-    }
+    nav a:hover { color: #8a5a9c; }
 
     /* ANIMASI TEKS */
     @keyframes fadeSlide {
-      0% { opacity: 0; transform: translateY(30px); }
+      0% { opacity: 0; transform: translateY(35px); }
       100% { opacity: 1; transform: translateY(0); }
     }
 
-    /* TEKS BERGERAK */
     .welcome-text {
       text-align: center;
-      padding: 20px 30px;
+      padding: 15px 35px;
       font-size: 17px;
       color: #7a6a72;
-      animation: fadeSlide 1.4s ease-out;
+      animation: fadeSlide 1.5s ease-out;
       line-height: 1.6;
     }
 
     .welcome-text h2 {
       font-family: 'Baloo 2';
-      font-size: 28px;
+      font-size: 30px;
       color: #9b5ca7;
       margin-bottom: 10px;
     }
 
-    /* FOOTER */
+    /* TOMBOL LIHAT PRODUK */
+    .cta {
+      display: block;
+      width: 200px;
+      background: #ff8ac3;
+      color: white;
+      padding: 12px;
+      margin: 25px auto;
+      text-align: center;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .cta:hover { background: #ff6aaa; }
+
+    /* GRID PRODUK */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      max-width: 850px;
+      margin: 30px auto 0;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(200, 150, 180, 0.2);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(180, 130, 200, 0.3);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 15px;
+      height: 170px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      color: #8a5ca2;
+      margin-top: 12px;
+      font-family: 'Baloo 2';
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #7a6a72;
+      margin-bottom: 8px;
+    }
+
     footer {
       margin-top: 50px;
       text-align: center;
       font-size: 14px;
       color: #7d6577;
     }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){ .product-grid{grid-template-columns:1fr;} }
   </style>
 </head>
 
 <body>
-
   <div class="container">
 
+    <!-- NAV -->
     <nav>
       <a href="index.html">Beranda</a>
       <a href="tentang.html">Tentang</a>
@@ -95,8 +149,40 @@
     <div class="welcome-text">
       <h2>Selamat Datang di Toko Online</h2>
       <strong>Kerajinan Rajut ARYU: Art Rajut Yuri</strong><br><br>
-      Kami menjual berbagai produk rajutan handmade berkualitas dengan desain yang elegan, lembut, dan penuh cinta.  
+      Kami menjual berbagai produk rajutan handmade berkualitas dengan desain yang elegan, lembut, dan penuh cinta.
       Setiap karya dibuat dengan teliti oleh tangan kreatif untuk menghadirkan kehangatan dalam setiap rajutan.
+    </div>
+
+    <!-- TOMBOL -->
+    <a class="cta" href="produk.html">Lihat Semua Produk</a>
+
+    <!-- PRODUK TANPA HARGA -->
+    <div class="product-grid">
+
+      <div class="card">
+        <img src="gantungan.jpg" alt="Keychain Rajut" />
+        <h3>Keychain Rajut</h3>
+        <p>Gantungan lucu handmade.</p>
+      </div>
+
+      <div class="card">
+        <img src="kembang.jpg" alt="Bunga Rajut" />
+        <h3>Bunga Rajut</h3>
+        <p>Bunga lembut full rajutan.</p>
+      </div>
+
+      <div class="card">
+        <img src="tas putih.jpg" alt="Tas Rajut" />
+        <h3>Tas Rajut Elegan</h3>
+        <p>Model modern & cute.</p>
+      </div>
+
+      <div class="card">
+        <img src="tas kambing.jpg" alt="Tas Rajut Custom" />
+        <h3>Tas Rajut Custom</h3>
+        <p>Bisa request model.</p>
+      </div>
+
     </div>
 
     <footer>
@@ -105,6 +191,5 @@
     </footer>
 
   </div>
-
 </body>
 </html>
